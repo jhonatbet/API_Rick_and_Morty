@@ -1,0 +1,30 @@
+<ion-content *ngIf="allLocations">
+
+  <ion-grid>
+    <ion-row>
+      <ion-col sizeMd="4" offsetMd="4">
+
+  <ion-list>
+    <ion-list-header>
+      Listado de Locaciones
+    </ion-list-header>
+
+    <ion-item *ngFor = "let location of allLocations.results "> 
+  
+      <ion-label>
+        <h2>{{ location.name }}</h2>
+        <h3>Id: {{ location.id}}</h3>
+        <h3>Tipo: {{ location.type}}</h3>
+        <p>Dimension: {{ location.dimension}}</p>
+        <p>Residentes: {{ location.residents}}</p>
+        <p>Creado: {{ location.created}}</p>
+      </ion-label>
+      
+    </ion-item>
+  </ion-list>
+
+</ion-col>
+</ion-row>
+</ion-grid>
+
+</ion-content>

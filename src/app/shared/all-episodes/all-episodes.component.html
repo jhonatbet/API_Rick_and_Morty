@@ -1,0 +1,29 @@
+<ion-content *ngIf="allEpisodes">
+
+  <ion-grid>
+    <ion-row>
+      <ion-col sizeMd="4" offsetMd="4">
+
+  <ion-list>
+    <ion-list-header>
+      Listado de Episodios
+    </ion-list-header>
+
+    <ion-item *ngFor = "let episode of allEpisodes.results "> 
+
+      <ion-label>
+        <h2>{{ episode.name }}</h2>
+        <h3>Id: {{ episode.id}}</h3>
+        <h3>Date: {{ episode.air_date}}</h3>
+        <p>Episodio: {{ episode.episode}}</p>    
+        <p>Creado: {{ episode.created}}</p>
+      </ion-label>
+      
+    </ion-item>
+  </ion-list>
+
+</ion-col>
+</ion-row>
+</ion-grid>
+
+</ion-content>
